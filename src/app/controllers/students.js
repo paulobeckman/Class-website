@@ -11,7 +11,11 @@ module.exports = {
     },
 
     create (req, res) {
-        return res.render("students/create")
+        Student.teachersSelectOptions(function(options){
+            return res.render("students/create", {teacherOptions: options})
+
+        })
+
 
     },
 
@@ -44,7 +48,9 @@ module.exports = {
         Student.find(req.params.id, function (student) {
             student.birth = date(student.birth).iso
 
-            return res.render("students/edit", {student})
+            Student.teachersSelectOptions(function (options) {
+                return res.render("students/edit", {student, teacherOptions: options})
+            })
         })
     },
     
@@ -66,5 +72,5 @@ module.exports = {
         Student.delete(req.body.id, function () {
             return res.redirect(`/students`)
         })
-    },
+    }
 }
