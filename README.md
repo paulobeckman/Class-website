@@ -30,7 +30,7 @@
 
 ## 💻 Sobre o projeto
 
-📗▶ Class website - apresenta as informações sobre um aluno, além de poder redirecionar para todas as redes sociais dele. Além disso, o site conta com um sistema de cadastro de Professores e alunos, afim de ter um melhor controle sobre os alunos e professores da instituição.
+📗▶ Class website - apresenta as informações sobre um aluno, além de poder redirecionar para todas as redes sociais dele. Além disso, o site conta com um sistema de cadastro de Professores e Alunos, afim de ter um melhor controle sobre os alunos e professores da sua instituição.
 
 
 Na aba Sobre:
@@ -67,6 +67,10 @@ Na aba Aluno:
    - carga horária semanal
 
 Além de fazer cadastro o sistema permite visualizar os dados, fazer edição e deletar. 
+
+O sistema armazena todas as informações no banco de dados postgres.
+
+Também o sistema conta com um sistema de filtro por nome ou atendimento no caso dos Professor. E nome ou email no caso do aluno. Além do sistema de filtro o sistema conta com paginação exibindo 2 perfis de usuário por pagina, seja professor, seja aluno.
 
 Projeto desenvolvido como desafio no curso **LaunchBase** oferecida pela [Rocketseat](rs).
 "O [LaunchBase](lb) é um treinamento no formato de bootcamp online que tem duração de 8 semanas. A cada semana os conteúdos são liberados de acordo com um cronograma, guiando o aluno pelas ferramentas e conceitos mais modernos de desenvolvimento que permitirão construir as melhores aplicações e ter acesso às melhores oportunidades como programador." - Rocketseat
@@ -113,15 +117,16 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [HTML][HTML]
 - [Nunjucks][Nunjucks]
 - [Unsplash Source][API]
+- [Postgres][pg]
 
 
 ## 🚀 Como rodar este projeto
  
 Podemos considerar este projeto como sendo divido em duas partes:
-1. Back End (arquivos server.js, routes.js, data.js, data.json, utils.js e pasta controllers) 
-2. Front End (pasta views e pasta public)
+1. Back End (arquivos server.js, routes.js, script.js e pastas controllers, models, config e lib) 
+2. Front End (pasta views e arquivo styles.css)
 
-💡O Front End presisa que o Back End esteja sendo executado para funcionar.
+💡Tanto o Front End quando o Back End irão rodar assim que a aplicação for iniciada.
 
 ### Pré-requisitos
 
@@ -156,14 +161,13 @@ Feito por Paulo Beckman 👋🏽 [Entre em contato!](https://www.linkedin.com/in
 
 [nodejs]: https://nodejs.org/
 [vscode]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
 [license]: https://opensource.org/licenses/MIT
 [rs]: https://rocketseat.com.br
 [lb]: https://pages.rocketseat.com.br/launchbase/inscricao/5
 [js]: https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript
 [CSS]: https://developer.mozilla.org/pt-BR/docs/Web/CSS
 [HTML]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
-[v1]: https://github.com/paulobeckman/web-information-and-videos
 [Nunjucks]: https://www.npmjs.com/package/nunjucks
 [API]: https://source.unsplash.com/
+[pg]: https://www.postgresql.org/
 
