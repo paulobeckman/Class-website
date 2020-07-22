@@ -1,23 +1,47 @@
+const { age, date, graduation } = require('../../lib/utils')
 const Intl = require('intl')
 const Teacher = require('../models/Teacher')
-const { age, date, graduation } = require('../../lib/utils')
-const { render } = require('nunjucks')
 
 
 module.exports = {
     index(req, res) {
-        const { filter } = req.query
-            
-        if (filter) {
-            Teacher.findBy(filter, function(teachers){
-                return res.render("teachers/index", {teachers, filter})
-            })
+        
+        let { filter, page, limit } = req.query
 
-        } else {
-            Teacher.all(function(teachers) {
-                return res.render("teachers/index", {teachers})
-            })
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * (page - 1)
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(teachers) {
+                
+                const pagination = {
+                    total : Math.ceil(teachers[0].total / limit),
+                    page
+                } 
+
+                let teacherAll = teachers.map(teacher => {
+                    const subjects_taught = teacher.subjects_taught.split(",")
+
+                    const teacherSubjects_taught = {
+                        ...teacher,
+                        subjects_taught: subjects_taught
+                    }
+
+                    return teacherSubjects_taught
+                })
+
+                return res.render("teachers/index", {teachers: teacherAll, pagination, filter})
+            }
         }
+        
+        Teacher.paginate(params)
+
+
     },
 
     create(req, res) {

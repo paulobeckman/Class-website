@@ -418,7 +418,7 @@ tbody tr td {
     color: black;
 }
 
-tbody tr td span.matter{
+tbody tr td span.subjects_taught{
     padding: 8px 16px;
     background-color: var(--sencundary-color);
     border-radius: 16px;
@@ -474,4 +474,29 @@ tbody tr .schoolYear span{
 .table-container .header form button {
     margin: 0;
     width: 100%;
+}
+
+/*pagination*/
+
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-items: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid var(--primary-color);
 }
