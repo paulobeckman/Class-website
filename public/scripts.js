@@ -24,12 +24,13 @@ function paginate (selectedPage, totalPages) {
     for(let currentPage = 1; currentPage <= totalPages; currentPage++) {
         
         const firstAndLastPage = currentPage == 1  || currentPage == totalPages 
-        const pagesAfterSelectedPage = currentPage <= selectedPage + 2
-        const pagesBeforeSelectedPage = currentPage >= selectedPage - 2
+        const secundAndAntepenultPage = currentPage == 2 || currentPage == totalPages - 1
+        const pagesAfterSelectedPage = currentPage <= selectedPage + 1
+        const pagesBeforeSelectedPage = currentPage >= selectedPage - 1
 
-        if (firstAndLastPage || pagesBeforeSelectedPage && pagesAfterSelectedPage) {
+        if (firstAndLastPage || secundAndAntepenultPage || pagesBeforeSelectedPage && pagesAfterSelectedPage) {
 
-            if(oldPage && currentPage - oldPage > 2) {
+            if(oldPage && currentPage - oldPage >  2) {
                 pages.push("...")
             }
             if (oldPage && currentPage - oldPage == 2) {
