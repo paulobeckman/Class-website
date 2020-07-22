@@ -76,10 +76,8 @@ Projeto desenvolvido como desafio no curso **LaunchBase** oferecida pela [Rocket
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
 	
- <img alt="Class-website" title="#Class-website" src="./github-assets/projeto6.1.gif" width="800px">
+ <img alt="Class-website" title="#Class-website" src="./github-assets/Class-website.gif" width="800px">
  
- <img alt="Class-website" title="#Class-website" src="./github-assets/projeto6.2.gif" width="800px">
-
   <img alt="Class-website" title="#Class-website" src="./github-assets/pagina1.png" width="400px">
 
   <img alt="Class-website" title="#Class-website" src="./github-assets/pagina2.png" width="400px">
