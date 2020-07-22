@@ -134,7 +134,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js][nodejs]. 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
 
-### 🧭 Rodando a aplicação web (Front End)
+### 🧭 Rodando a aplicação web (Front End e Back End)
 
 ```bash
 # Clone este repositório
