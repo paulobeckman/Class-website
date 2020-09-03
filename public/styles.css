@@ -11,18 +11,31 @@
     margin: 0;  
     padding: 0;
     border: 0;
+    box-sizing: border-box;
+
 }
 body {
     background: #282a36;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
+
 header{
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
     padding: 32px;
     border-bottom: 1px solid #333;
-    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 22px;
+    border-top: 1px solid #333;
+}
+footer div:first-child{
+    margin-bottom: 8px;
 }
 
 .links {
@@ -103,8 +116,13 @@ header{
     color: var(--color-green);
 }
 
+#links-footer {
+    margin-bottom: 10px;
+}
+
 #links-footer a{
     border-bottom: 1px solid var(--color-green);
+    
 }
 
 
